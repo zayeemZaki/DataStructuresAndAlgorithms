@@ -2,7 +2,7 @@ def mergeSort(array):
     if len(array) <= 1:
         return array
 
-    mid = len(array) / 2
+    mid = len(array) // 2
     leftHalf = mergeSort(array[0:mid])
     rightHalf = mergeSort(array[mid:len(array)])
 
@@ -24,3 +24,11 @@ def merge(left, right):
     result.extend(right[j:])
 
     return result
+
+arr = [3, 11, 9, 1, 0, 6]
+print(mergeSort(arr))
+
+"""
+Time Complexity = O(nlog(n))
+Auxiliary Space = O(n)
+"""
